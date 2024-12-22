@@ -10,3 +10,9 @@ def hello_world():
 @app.route('/greet/<name>')
 def greet(name=""):
     return f"Hello {name}"
+
+@app.route('/f/<celsius>')
+def convert_celsius_to_fahrenheit(celsius):
+    """Convert celsius to fahrenheit."""
+    fahrenheit = float(celsius) * 9.0 / 5 + 32
+    return f"Input value: {celsius} C<br>Result: {fahrenheit:.2f} F"
