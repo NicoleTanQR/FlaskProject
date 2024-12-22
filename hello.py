@@ -7,5 +7,6 @@ def hello_world():
     return "<p>Hello, World :)</p>"
 
 @app.route('/greet')
-def greet():
-    return "Hello"
+@app.route('/greet/<name>')
+def greet(name=""):
+    return f"Hello {name}"
